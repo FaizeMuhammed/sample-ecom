@@ -26,14 +26,14 @@ import {
 } from 'lucide-react';
 
 export default function OrderForm() {
-  // Theme colors from original design - updated to use orange consistently
+  // Theme colors updated to use fluorescent green
   const theme = {
-    primary: 'from-red-600 to-red-700',
+    primary: 'from-lime-400 to-lime-600',
     secondary: 'from-gray-800 to-gray-900',
-    accent: 'bg-red-600',
-    highlightGradient: 'from-orange-500 to-red-600',
-    productGradient: 'from-orange-500 to-red-600', // Changed from blue to orange
-    deliveryGradient: 'from-orange-500 to-red-600', // Changed from green to orange
+    accent: 'bg-lime-500',
+    highlightGradient: 'from-lime-300 to-green-500',
+    productGradient: 'from-lime-400 to-green-500', // Changed from orange to fluorescent green
+    deliveryGradient: 'from-lime-400 to-green-500', // Changed from orange to fluorescent green
   };
   
   // Form state
@@ -406,7 +406,7 @@ export default function OrderForm() {
                     </div>
                     Customer Information
                     {formData.customer && (
-                      <div className="ml-auto flex items-center bg-white text-red-600 px-2 py-1 rounded-full shadow-sm text-xs">
+                      <div className="ml-auto flex items-center bg-white text-lime-600 px-2 py-1 rounded-full shadow-sm text-xs">
                         <CheckCircle size={12} className="mr-1" />
                         Customer Selected
                       </div>
@@ -476,9 +476,9 @@ export default function OrderForm() {
                       <div className="flex-1">
                         <label className="block text-sm font-medium text-black mb-1">Mobile Number</label>
                         <div className={`flex rounded overflow-hidden border-2 transition-all duration-300 ${
-                          focusedField === 'mobile' ? 'border-red-500 shadow-sm' : 'border-gray-300'
+                          focusedField === 'mobile' ? 'border-lime-500 shadow-sm' : 'border-gray-300'
                         }`}>
-                          <div className="bg-red-50 p-2 flex items-center border-r border-gray-300 text-red-600">
+                          <div className="bg-lime-50 p-2 flex items-center border-r border-gray-300 text-lime-600">
                             <Phone size={18} />
                           </div>
                           <input
@@ -497,9 +497,9 @@ export default function OrderForm() {
                       <div className="flex-1">
                         <label className="block text-sm font-medium text-black mb-1">Delivery Location</label>
                         <div className={`flex rounded overflow-hidden border-2 transition-all duration-300 ${
-                          focusedField === 'location' ? 'border-red-500 shadow-sm' : 'border-gray-300'
+                          focusedField === 'location' ? 'border-lime-500 shadow-sm' : 'border-gray-300'
                         }`}>
-                          <div className="bg-red-50 p-2 flex items-center border-r border-gray-300 text-red-600">
+                          <div className="bg-lime-50 p-2 flex items-center border-r border-gray-300 text-lime-600">
                             <MapPin size={18} />
                           </div>
                           <select
@@ -514,7 +514,7 @@ export default function OrderForm() {
                               <option key={location.id} value={location.name}>{location.name}</option>
                             ))}
                           </select>
-                          <div className="p-2 flex items-center text-red-600 bg-red-50 border-l border-gray-300">
+                          <div className="p-2 flex items-center text-lime-600 bg-lime-50 border-l border-gray-300">
                             <ChevronDown size={18} />
                           </div>
                         </div>
@@ -547,7 +547,7 @@ export default function OrderForm() {
                     </div>
                     Product Selection
                     {selectedProducts.length > 0 && (
-                      <div className="ml-auto flex items-center bg-white text-red-600 px-2 py-1 rounded-full shadow-sm text-xs">
+                      <div className="ml-auto flex items-center bg-white text-lime-600 px-2 py-1 rounded-full shadow-sm text-xs">
                         <CheckCircle size={12} className="mr-1" />
                         {selectedProducts.length} items selected
                       </div>
@@ -914,7 +914,7 @@ export default function OrderForm() {
                     </div>
                     Delivery & Payment
                     {formData.deliveryBy && (
-                      <div className="ml-auto flex items-center bg-white text-red-600 px-2 py-1 rounded-full shadow-sm text-xs">
+                      <div className="ml-auto flex items-center bg-white text-lime-600 px-2 py-1 rounded-full shadow-sm text-xs">
                         <CheckCircle size={12} className="mr-1" />
                         Delivery Ready
                       </div>
@@ -1131,7 +1131,7 @@ export default function OrderForm() {
                   {orderSummaryOpen ? (
                     <ChevronDown size={18} />
                   ) : (
-                    <div className="flex items-center bg-white text-red-600 px-2 py-1 rounded-full text-sm shadow-sm font-medium">
+                    <div className="flex items-center bg-white text-lime-600 px-2 py-1 rounded-full text-sm shadow-sm font-medium">
                       <DollarSign size={14} className="mr-1" />
                       ₹{formData.billAmount || '0'}
                     </div>
@@ -1232,10 +1232,10 @@ export default function OrderForm() {
       {/* Success Message - Premium Popup */}
       {showSuccess && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-30 backdrop-blur-sm">
-          <div className="bg-white rounded-lg shadow-lg p-5 max-w-md w-full mx-4 transition-all duration-300 border-l-4 border-red-600">
+          <div className="bg-white rounded-lg shadow-lg p-5 max-w-md w-full mx-4 transition-all duration-300 border-l-4 border-lime-500">
             <div className="flex items-center mb-4">
-              <div className="bg-red-50 p-2 rounded-full mr-3">
-                <CheckCircle size={28} className="text-red-600" />
+              <div className="bg-lime-50 p-2 rounded-full mr-3">
+                <CheckCircle size={28} className="text-lime-600" />
               </div>
               <h3 className="text-xl font-semibold text-black">Order Confirmed</h3>
               <div className="ml-auto text-gray-400 cursor-pointer hover:text-black" onClick={() => setShowSuccess(false)}>
@@ -1244,9 +1244,9 @@ export default function OrderForm() {
             </div>
             
             <div className="mb-4">
-              <div className="bg-red-50 rounded-lg p-3 mb-3 border border-red-100">
+              <div className="bg-lime-50 rounded-lg p-3 mb-3 border border-lime-100">
                 <div className="flex items-center">
-                  <Clipboard size={16} className="text-red-600 mr-2" />
+                  <Clipboard size={16} className="text-lime-600 mr-2" />
                   <div className="text-sm font-medium text-black">Order ID: <span className="font-bold">A38686</span></div>
                 </div>
               </div>
@@ -1266,7 +1266,7 @@ export default function OrderForm() {
                 </div>
                 <div className="flex justify-between font-semibold">
                   <span className="text-black">Total:</span>
-                  <span className="text-red-600">₹{formData.billAmount || 0}</span>
+                  <span className="text-lime-600">₹{formData.billAmount || 0}</span>
                 </div>
               </div>
               
@@ -1305,7 +1305,7 @@ export default function OrderForm() {
                 });
                 setSelectedProducts([]);
               }}
-              className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-2.5 px-4 rounded-lg hover:opacity-90 shadow-sm font-medium"
+              className="w-full bg-gradient-to-r from-lime-400 to-green-500 text-white py-2.5 px-4 rounded-lg hover:opacity-90 shadow-sm font-medium"
             >
               Back to Order Form
             </button>
