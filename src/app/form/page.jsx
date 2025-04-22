@@ -24,6 +24,7 @@ import {
   Menu,
   ChevronRight
 } from 'lucide-react';
+import NavBar from '@/components/nav'; // Import the NavBar component
 
 export default function OrderForm() {
   // Theme colors updated to use a single dark fluorescent green
@@ -323,6 +324,9 @@ export default function OrderForm() {
   
   return (
     <div className="flex flex-col h-screen bg-gray-50">
+      {/* Navigation Bar */}
+      <NavBar theme={theme} activePage="order-form" />
+      
       {/* Header */}
       <header className={`${theme.highlightColor} px-4 py-3 flex justify-between items-center shadow-sm`}>
         <div className="flex items-center">
