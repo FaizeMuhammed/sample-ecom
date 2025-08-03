@@ -460,7 +460,7 @@ export default function InaugurationPage() {
               
               <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 Today marks a revolutionary milestone in smart home and business automation. 
-                We're unveiling our comprehensive digital platform featuring cutting-edge solutions 
+                We are unveiling our comprehensive digital platform featuring cutting-edge solutions 
                 that will transform how you interact with your spaces.
               </p>
             </div>
