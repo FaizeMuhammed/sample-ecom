@@ -596,7 +596,7 @@ export default function InaugurationPage() {
               >
                 <div className="flex items-center space-x-4">
                   <Gift className="w-10 h-10 group-hover:rotate-12 transition-transform duration-300" />
-                  <span className="text-shadow">🎉 Launch Website 🎉</span>
+                  <span className="text-shadow">🎉 Launch Able-Automation Digital Platform 🎉</span>
                   <ChevronRight className="w-8 h-8 group-hover:translate-x-2 transition-transform duration-300" />
                 </div>
                 
